@@ -1,6 +1,3 @@
-language: go
-go:
-  - 1.9.2
 addons:
   ssh_known_hosts: heatherlent.co
 notifications:
@@ -15,5 +12,7 @@ before_install:
   - chmod 600 travis_rsa
   - mv travis_rsa ~/.ssh/id_rsa
 install: true
+script:
+  - echo 'Hi'
 after_success:
   - bash ./deploy.sh
